@@ -1,7 +1,7 @@
 public class Radix {
     public static int nth(int n, int col){
         int x = Math.abs(n);
-        int b = n / (int)Math.pow(10, b - 1) % 10;
+        int b = n / (int)Math.pow(10, col - 1) % 10;
         return b -1;
     }
 
@@ -14,9 +14,17 @@ public class Radix {
         }
     }
 
-    public static void merge(MyLinkedList original, MyLinkedList[] buckets){
+    public static void merge(SortableLinkedList original, SortableLinkedList[] buckets){
         for (int i=0; i<buckets.length; i++) {
-      original.extend(buckets[i]);
+        original.extend(buckets[i]);
+        }
     }
+
+    public static void radixSortSimple(SortableLinkedList data){
+
+    }
+
+    public static void radixSort(SortableLinkedList data){
+        
     }
 }
